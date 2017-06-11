@@ -18,3 +18,10 @@ python manage.py runserver
 
  - 어드민 관련 계정 생성
 python manage.py createsuperuser
+
+ - 내 개인 로컬에서 셋팅
+source /usr/local/bin/virtualenvwrapper.sh
+mkvirtualenv chap01
+
+ - 파이썬 메니저 호출창
+ alt + r

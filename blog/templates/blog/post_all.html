@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,6 +10,7 @@
     <h2><a href='{{ post.get_absolute_url }}'> {{post.title}} </a></h2>
     {{ post.modify_date|date:"N d, Y" }}
     <p> {{ post.description }} </p>
+    <!--<p> {{ post.content }} </p>-->
 {% endfor %}
 <br/>
 <div>
