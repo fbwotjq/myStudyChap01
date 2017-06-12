@@ -2,14 +2,14 @@
 <html lang="kr">
 <head>
     <meta charset="UTF-8">
-    <title>post_archive</title>
+    <title>post_archive_year</title>
 </head>
 <body>
-    <h1>Post Archives until {% now "N d, Y" %}</h1>
+    <h1>Post Archives for {{ year|date:'Y' }}</h1>
     <ul>
         {% for tdate in date_list %}
-            <li style="display: inline;">
-                <a href="{% url 'blog:post_year_archive' tdate|date:'Y' %}">Year-{{ tdate|date:"Y" }}</a>
+            <li style="display: inline">
+                <a href="{% url 'blog:post_month_archive' year|date:'Y' tdate|date:'m' %}">{{ tdate|date:"F" }}</a>
             </li>
         {% endfor %}
     </ul>
@@ -18,7 +18,7 @@
         <ul>
             {% for post in object_list %}
                 <li>
-                    {{ post.modify_date|date:"Y-m-d" }} &nbsp;&nbsp;&nbsp;
+                    {{ post.modify_date|date:"Y-m-d" }}&nbsp;&nbsp;
                     <a href="{{ post.get_absolute_url }}"><strong>{{ post.title }}</strong></a>
                 </li>
             {% endfor %}
