@@ -25,3 +25,6 @@ mkvirtualenv chap01
 
  - 파이썬 메니저 호출창
  alt + r
+
+ - 관련 개발툴
+ pycharm
