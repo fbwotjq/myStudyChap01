@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>장고 북마크 - 키워드: {{ query }}</title>
+</head>
+<body>
+
+    <h1>{{ query }}을 포함하는 북마크입니다.</h1>
+    {% if bookmarks %}
+    <ul>
+    {% for bookmark in bookmarks %}
+        <li><a href="{{ bookmark.link.url }}"> {{ bookmark.title }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>북마크가 없습니다.</p>
+    {% endif %}
+</body>
+</html>
